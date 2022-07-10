@@ -41,6 +41,6 @@ Hammer
 Garden Saw
 ```
 ### Installation
-Just simply download this repo and copy the folder ```Kentoy's Crossbow``` and paste it in this location ```Zomboid/mods```
+Just simply download this repo and copy the folder ```Kentoy's Crossbow``` and paste it in this location ```C:/[Name of the User]/[Name of the User]/Zomboid/mods```
 
 Do you like this mod? [Support me](https://ko-fi.com/kents_workof_art) if you want more updates and new mods.
