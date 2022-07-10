@@ -1,0 +1,87 @@
+module Base {
+    /* ===== Ammo & Mag ===== */
+
+	item Arrow
+    {
+        DisplayCategory = Ammo,
+        Count	=	1,
+        Weight	=	0.02,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Crossbow Bolt,
+        DisplayCategory	= CrossbowAmmo,
+        Icon	=	Arrow,
+        MetalValue = 1,
+        StaticModel = ArrowMesh,
+    }
+    
+	item Quiver
+    {
+        DisplayCategory = Ammo,
+        Weight	=	0.6,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Quiver,
+        Icon	=	Quiver,
+        MetalValue = 25,
+        StaticModel = QuiverMesh,
+        PlaceOneSound = BoxOfRoundsPlaceOne,
+        DisplayCategory	= CrossbowQuiver,
+        PlaceMultipleSound = BoxOfRoundsPlaceAll,
+    }
+
+	item ArrowMagazine
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Crossbow Magazine,
+        Icon	=	ArrowMag,
+        MaxAmmo = 5,
+        AmmoType = Arrow,
+        StaticModel = GunMagazine,
+        GunType = Base.Crossbow,
+        DisplayCategory	= CrossbowMagazine,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+    /* ====== Making Arrow =====*/
+
+    recipe Make Crossbow Bolt 
+    {
+        Plank=1,
+        Nails=3,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep GardenSaw,
+        
+        Time:       12.0,
+        Result:     Arrow=2,
+        AnimNode:   SawLog,
+        Sound:      Sawing,
+        Category:   Carpentry,
+        SkillRequired:Carpentry=3,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        CanBeDoneFromFloor: TRUE,
+        Prop1:      GardenSaw,
+        Prop2:      Plank,
+    }
+
+    recipe Open Quiver
+    {
+        Quiver,
+
+        Result:Arrow=25,
+        Sound:BoxOfRoundsOpenOne,
+        Time:10.0,
+    }
+
+    recipe Place Standard Arrow in Quiver
+    {
+        Arrow=25,
+
+        Result:Quiver,
+        Sound:BoxOfRoundsOpenOne,
+        Time:13.0,
+    }
+}

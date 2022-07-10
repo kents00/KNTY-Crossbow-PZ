@@ -1,0 +1,6 @@
+ItemName_EN = {
+    ItemName_Base.Crossbow = "Crossbow"
+    ItemName_Base.Repair = "Crossbow RepairKit"
+    ItemName_Base.Quiver = "Quiver"
+    ItemName_Base.Arrow = "Crossbow Bolt"
+}

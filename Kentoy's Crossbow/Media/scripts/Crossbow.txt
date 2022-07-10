@@ -1,0 +1,137 @@
+module Base {
+    /**********Crossbow**********/
+
+    item Crossbow {
+    /*Stats Build 41.71*/
+
+    /* ============ BASIC INFORMATION ============ */
+
+    DisplayName                 	=	Crossbow,	
+	Icon                        	=	Crossbow,	
+	WeaponSprite                	=	Crossbow,	
+	DisplayCategory                 =   Weapon,
+    Type                            =   Weapon,	
+	SubCategory                 	=	Firearm,	
+	Ranged                      	=	TRUE,	
+	IsAimedFirearm              	=	TRUE,	
+	WeaponReloadType            	=	boltactionnomag,	
+	FireMode                    	=	Single,	
+	RackAfterShoot              	=	FALSE,	
+	AttachmentType              	=	Rifle,	
+	UseEndurance                	=	FALSE,	
+	TwoHandWeapon               	=	TRUE,	
+	RequiresEquippedBothHands   	=	TRUE,
+
+	/* ============ PERFORMANCE DATA ============= */
+    StopPower                       =   10,
+    SplatNumber	                    =	2,			
+	MinRange                    	=	0.55,
+	MaxRange                    	=	10,
+	AimingPerkRangeModifier     	=	5.1,
+	MinDamage                   	=	0.5,
+	MaxDamage                   	=	1,
+	CriticalChance              	=	5,
+	CritDmgMultiplier            	=	5,	
+	AimingPerkCritModifier      	=	10,	
+	HitChance                   	=	17,
+	ToHitModifier               	=	1.5,	
+	AimingPerkHitChanceModifier 	=	12,
+	MinAngle                     	=	0.960	,
+	AimingPerkMinAngleModifier  	=	0.005	,
+	ConditionMax                	=	50,	
+	ConditionLowerChanceOneIn   	=	60,	
+	MultipleHitConditionAffected	=	FALSE,	
+	JamGunChance                	=	0.1,	
+	AimingTime                  	=	18,
+	ReloadTime                  	=	35,	
+	SwingTime                   	=	3,
+	MinimumSwingTime            	=	2.5,
+	SwingAmountBeforeImpact     	=	0,	
+	RecoilDelay                 	=	35,
+	Weight                      	=	3.2	,
+	OAL				                =	2.3	,
+
+	/* ============= AMMUNITION DATA ============= */			
+	AmmoType                    	=	Base.Arrow,
+	MagazineType					=	Base.ArrowMagazine,
+	AmmoBox                     	=	Quiver,
+	MaxAmmo                     	=	5,	
+	ProjectileCount             	=	1,	
+	MaxHitCount                 	=	2,	
+	PiercingBullets             	=	TRUE,	
+	ShareDamage                 	=	FALSE,	
+	SplatSize                   	=	3,	
+	SplatNumber                 	=	3,	
+	SplatBloodOnNoDeath         	=	TRUE,	
+	PushBackMod                 	=	0.3,	
+	KnockBackOnNoDeath          	=	TRUE,	
+	KnockdownMod                	=	6,	
+	DoorDamage                  	=	20,	
+
+	/* ============ ANIMATION & SOUND ============ */			
+	RunAnim                     	=	Run_Weapon2,	
+	IdleAnim                    	=	Idle_Weapon2,	
+	SwingAnim                   	=	Rifle,	
+	MetalValue                  	=	45,	
+	SoundVolume                 	=	10,	
+	SoundRadius                 	=	10,	
+	SoundGain                   	=	2,	
+	NPCSoundBoost               	=	1.5,
+    EjectAmmoStopSound              =   MSR788EjectAmmoStop,
+    EjectAmmoStartSound             =   MSR788EjectAmmoStart,
+    InsertAmmoStartSound            =   MSR788InsertAmmoStart,
+    InsertAmmoStopSound             =   MSR788InsertAmmoStop,
+    UnequipSound                    =   MSR788UnEquip,
+    EquipSound                      =   MSR788Equip,
+    BringToBearSound                =   MSR788BringToBear,
+    HitSound                        =   BulletHitBody,
+    ClickSound                      =   MSR788Jam,	
+	SwingSound                  	=	CrossbowShot,	
+	InsertAmmoSound             	=	CrossbowInsert,	
+	EjectAmmoSound              	=	CrossbowEject,	
+	RackSound                   	=	CrossbowReload,	
+	BreakSound                  	=	BreakMetalItem,	
+	ImpactSound                 	=	null,
+
+    /* =========== ATTACHMENT DATA ============ */
+    ModelWeaponPart = x2Scope x2Scope scope scope,
+    ModelWeaponPart = x4Scope x4Scope scope scope,
+    ModelWeaponPart = x8Scope x8Scope scope scope,
+    ModelWeaponPart = IronSight IronSight scope2 scope2,
+    ModelWeaponPart = RecoilPad RecoilPad recoilpad recoilpad,
+    ModelWeaponPart = RedDot RedDot reddot reddot,
+
+    }
+
+	/* =========== MESH =========== */
+    model Crossbow {
+        mesh = weapons/firearm/Crossbow,
+        texture = weapons/firearm/Crossbow,
+
+        attachment reddot		
+		{		
+			offset = 0.0000 0.0393 0.0091,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+
+		attachment scope		
+		{		
+			offset = 0.0000 0.0266 0.0091,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}		
+
+		attachment scope2		
+		{		
+			offset = 0.0000 0.0143 0.0088,	
+			rotate = 0.0000 0.0000 0.0000,	
+		}
+
+        attachment mag 
+        {
+            offset = 0.0000 -0.0015 -0.0051,	
+			rotate = 0.0000 0.0000 0.0000,
+        }
+
+    }
+
+}

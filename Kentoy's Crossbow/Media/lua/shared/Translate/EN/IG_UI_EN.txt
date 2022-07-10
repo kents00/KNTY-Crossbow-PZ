@@ -1,0 +1,6 @@
+IGUI_EN = {
+    IGUI_ItemCat_CrossbowRepairKit = "RepairKit",
+    IGUI_ItemCat_CrossbowAmmo = "Crossbow Bolt",
+    IGUI_ItemCat_CrossbowQuiver = "Quiver",
+    IGUI_ItemCat_CrossbowMagazine = "Crossbow Magazine"
+}

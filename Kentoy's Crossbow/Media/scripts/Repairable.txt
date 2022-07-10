@@ -1,0 +1,47 @@
+module Base {
+    /* =========== Repair =========== */
+
+	fixing Fix Crossbow 
+	{
+		Require: Crossbow,
+
+		Fixer: Repair=1,
+	}
+
+    item Repair
+    {
+        Weight		= 0.2,
+		Type		= Drainable,
+		UseWhileEquipped= FALSE,
+		UseDelta	= 0.125,		
+		DisplayName	= Crossbow RepairKit,
+		DisplayCategory	= CrossbowRepairKit,
+		Icon		= RepairKit,
+        StaticModel = RepairKitMesh,
+		WorldStaticModel = RepairKit,
+        WeightEmpty	= 0.05,
+    }
+    
+	recipe Make Crossbow Repair Kit
+    {
+        Plank=5,
+        ScrapMetal=10,
+        Woodglue=1,
+        Screws=4,
+        RubberBand=4,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep GardenSaw,
+
+        Time:       30.0,
+        Result:     Repair=1,
+        AnimNode:   SawLog,
+        Sound:      Sawing,
+        Category:   Carpentry,
+        SkillRequired:Carpentry=3,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        CanBeDoneFromFloor: TRUE,
+        Prop1:      GardenSaw,
+        Prop2:      Plank,
+    }
+    
+}
