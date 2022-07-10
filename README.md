@@ -1,6 +1,6 @@
 ![Crossbow Mod By Kents00](https://github.com/kents00/Kentoy-s-Crossbow-PZ/blob/main/Kentoy's%20Crossbow/preview.png)
 <h1 align="center">Crossbow Mod by Kentoy | Build 41.71+</h1>
-Adds a crossbow that you can locate and repair. In this mod, I go over crucial topics like repairing, crafting, and where you may find a crossbow while exploring Knox Country!
+Adds a crossbow that you can locate and repair. In this mod, I go over crucial topics like repairing and crafting. 
 
 ### What can this mod do?
 - This mod can easily kill zombies from a great distance to a medium distance.
